@@ -1,0 +1,28 @@
+.page
+{
+    background-image: linear-gradient(#DA4453,#89216B);
+    width: 100%;
+    height:90vh;
+    padding-top: 4%;
+}
+.radiogroup
+{
+    margin: 4% 0%;
+}
+mat-radio-button
+{
+    margin: 0% 2%;
+}
+mat-card
+{
+    width: 30%;
+    margin: auto;
+}
+
+form mat-form-field{
+    display: flex;
+}
+input[type="file"]
+{
+    width: 100%;
+}

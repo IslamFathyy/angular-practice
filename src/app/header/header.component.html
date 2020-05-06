@@ -1,0 +1,26 @@
+<Style>
+    a{
+        color: white;
+        text-decoration: none;
+        margin-left: 4%;
+    }
+</Style>
+
+<mat-toolbar color="accent">
+    <span>
+      <a routerLink="/">Online Shop</a>
+    </span>
+    <span class="spacer"></span>
+    <ul>
+      <li *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="login" routerLinkActive="">Login</a>
+      </li>
+      <li *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="register" routerLinkActive="">Signup</a>
+      </li>
+      <li *ngIf="userIsAuthenticated">
+        <button mat-button (click)="onLogout()">Logout</button>
+      </li>
+    </ul>
+  </mat-toolbar>
+  

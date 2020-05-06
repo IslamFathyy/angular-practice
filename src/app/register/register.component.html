@@ -1,0 +1,43 @@
+<div class="page">
+<mat-card>
+  
+  <h2>Register</h2>
+    <form [formGroup] = "form" (submit)="onSignup()">
+        <mat-form-field>
+            <input formControlName="username" matInput type="text" placeholder="UserName">
+            <mat-error *ngIf="form.get('username').invalid">Please enter a valid user name.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input formControlName="displayname" matInput  type="text" placeholder="DisplayName">
+            <mat-error *ngIf="form.get('displayname').invalid">Please enter a valid display Name.</mat-error>
+          </mat-form-field> 
+
+        <mat-form-field>
+        <input formControlName="email" matInput  type="email" placeholder="E-Mail">
+        <mat-error *ngIf="form.get('email').invalid">Please enter a valid email.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input formControlName="password" type="password"  matInput placeholder="Password">
+        <mat-error *ngIf="form.get('password').invalid">Please enter a valid password.</mat-error>
+     </mat-form-field>
+
+     <div class="radiogroup">
+     <mat-radio-group formControlName="gender"  style="margin: 2% 0%;">
+        <mat-radio-button value="MALE">Male</mat-radio-button>
+        <mat-radio-button value="FEMALE">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="upload mb-4">
+      <input class="btn btn-light"  (change)="onupload($event)" type="file">
+    </div>
+
+   <div>
+    <button mat-raised-button color="accent" type="submit">Signup</button>       
+   </div> 
+    
+    </form>
+  </mat-card>
+</div>
